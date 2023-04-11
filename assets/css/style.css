@@ -13,15 +13,21 @@
 /* ===================== ALL SCREEN SIZES ===================== */
 /* ============================================================ */
 :root {
-  --black: #000000;
+  --raisin-black: #282937;
   --white: #ffffff;
+  --sandy-brown: #feac5e;
+  --french-mauve: #c779d0;
+  --robin-egg-blue: #4bc0c8;
+  --malachite: #42db75;
 }
 
 body {
   margin: 0;
   font-size: 16px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Righteous";
   text-align: left;
+  background-color: var(--raisin-black);
+  color: var(--white);
 }
 
 /* ============================================================ */
@@ -30,7 +36,76 @@ body {
 @media screen and (min-width: 320px) {
   .wrapper {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    overflow: hidden;
+  }
+
+  .square {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 17em;
+    height: 17em;
+    /* border: solid 0.1em; */
+  }
+
+  .square_border-color_white {
+    border-color: var(--white);
+  }
+
+  .box {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.23, 1.83, 0.42, 1.19);
+  }
+
+  .box:hover {
+    transform: scale(1.2);
+  }
+
+  .box__circle {
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    animation: 1s linear infinite alternate boxMagic,
+      4s linear infinite spinning;
+    padding: 15% 0 0 0;
+  }
+
+  @keyframes boxMagic {
+    from {
+      box-shadow: 0 0 0 var(--sandy-brown), 0 0 0 var(--french-mauve),
+        0 0 0 var(--robin-egg-blue), 0 0 0 var(--malachite);
+    }
+    to {
+      box-shadow: 0 -0.625em 0 var(--sandy-brown),
+        -0.625em 0 0 var(--french-mauve), 0 0.625em 0 var(--robin-egg-blue),
+        0.625em 0 0 var(--malachite);
+    }
+  }
+
+  @keyframes spinning {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .box__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
   }
 }
 
@@ -38,22 +113,65 @@ body {
 /* ============== MOBILE WITH MEDIUM SCREEN SIZE ============== */
 /* ============================================================ */
 @media screen and (min-width: 390px) {
+  .square {
+    width: 20em;
+    height: 20em;
+  }
 }
 
 /* ============================================================ */
 /* =============== MOBILE WITH LARGE SCREEN SIZE ============== */
 /* ============================================================ */
 @media screen and (min-width: 428px) {
+  .square {
+    width: 22em;
+    height: 22em;
+  }
+
+  .box__circle {
+    width: 12.5em;
+    height: 12.5em;
+  }
+
+  .box__text {
+    font-size: 1.25em;
+  }
 }
 
 /* ============================================================ */
 /* ========================== TABLET ========================== */
 /* ============================================================ */
 @media screen and (min-width: 768px) {
+  .square {
+    width: 20em;
+    height: 20em;
+  }
+
+  .box__circle {
+    width: 18em;
+    height: 18em;
+  }
+
+  .box__text {
+    font-size: 2em;
+  }
 }
 
 /* ============================================================ */
 /* ========================== DESKTOP ========================= */
 /* ============================================================ */
 @media screen and (min-width: 992px) {
+  .square {
+    width: 40em;
+    height: 40em;
+  }
+
+  .box__circle {
+    width: 20em;
+    height: 20em;
+  }
+
+  .box__text {
+    font-size: 2.25em;
+  }
 }
