@@ -4,7 +4,6 @@
 
 - HTML 5
 - CSS 3
-- JavaScript ECMAScript 2020
 
 To use the projet you have to follow this steps:
 
