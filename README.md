@@ -1,4 +1,4 @@
-# Aberation
+# **Aberation**
 
 The **Aberation** project is a simple CSS animation.
 
@@ -13,6 +13,6 @@ To use the projet you have to follow this steps:
 - Go to the `template` folder
 - Open the `index.html` file
 
-## Glimpse
+## **Glimpse**
 
 https://aimerickferal.com/projects/aberation
