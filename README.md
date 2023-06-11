@@ -1,6 +1,6 @@
 # **Aberation**
 
-The **Aberation** project is a simple CSS animation.
+The **Aberation** project is a CSS animation.
 
 ## **Setup**
 
