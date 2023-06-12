@@ -43,20 +43,6 @@ body {
     overflow: hidden;
   }
 
-  .square {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    width: 17em;
-    height: 17em;
-    /* border: solid 0.1em; */
-  }
-
-  .square_border-color_white {
-    border-color: var(--white);
-  }
-
   .box {
     position: relative;
     cursor: pointer;
